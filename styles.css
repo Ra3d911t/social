@@ -194,14 +194,18 @@ header {
     padding: 8px;
     border-radius: 4px;
     margin-bottom: 6px;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .quran-text {
     font-size: 0.7em;
-    line-height: 1.2;
+    line-height: 1.5;
     color: #34495e;
     font-family: 'Amiri', serif;
     direction: rtl;
+    text-align: center;
+    white-space: pre-wrap;
 }
 
 .sura-number {
