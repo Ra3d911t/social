@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    font-family: 'Forte', cursive;
+    background: linear-gradient(135deg, 
+        #410fa4 0%,
+        #4641a8 25%,
+        #6f6d6f 50%,
+        #dac8d7 75%,
+        #ffffff 100%
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 100%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 0%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animations for icons */
+.social-link i,
+.payment-link i,
+.location-link i {
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Add rotation animation for WhatsApp icon */
+.whatsapp i {
+    animation: rotate 8s infinite linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .info-table {
+        display: block;
+        width: 100%;
+    }
+
+    .info-table th,
+    .info-table td {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .info-table th {
+        text-align: left;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+    }
+
+    .social-links,
+    .payment-links,
+    .card-section {
+        gap: 10px;
+        width: 100%;
+    }
+
+    .social-link,
+    .payment-link,
+    .card-link,
+    .id-link {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 0.9em;
+    }
+
+    .social-link i,
+    .payment-link i,
+    .card-link i,
+    .id-link i {
+        font-size: 1.3em;
+    }
+
+    .location-section h3 {
+        font-size: 1.1em;
+    }
+
+    .location-section p {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .info-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .info-table th,
+    .info-table td {
+        padding: 10px;
+    }
+
+    .social-links,
+    .payment-links {
+        gap: 8px;
+    }
+
+    .social-link,
+    .payment-link {
+        width: 120px;
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .google-maps {
+        height: 120px;
+    }
+
+    .location-section h3 {
+        font-size: 1em;
+    }
+
+    .location-section p {
+        font-size: 0.8em;
+    }
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-image {
+    margin: 20px auto;
+    width: 150px;
+    height: 150px;
+}
+
+.quran-number {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.number-box {
+    display: inline-block;
+    background: #fff9e6;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    border: 1px solid #ffd700;
+    position: relative;
+    overflow: hidden;
+}
+
+.number-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,215,0,0.1), rgba(255,215,0,0.05));
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.number-box span {
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #333;
+    line-height: 1.2;
+    display: block;
+    z-index: 2;
+    position: relative;
+    white-space: nowrap;
+}
+
+.quran-number p {
+    color: #666;
+    font-size: 0.9em;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.prof.card-image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.card-link img,
+.id-link img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #7f8c8d;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.info-table th {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #34495e;
+}
+
+.info-table td {
+    padding: 30px;
+    vertical-align: top;
+}
+
+.social-links,
+.payment-links,
+.work-files {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.work-file-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.work-file-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.work-file-link i {
+    font-size: 1.2em;
+}
+
+.social-link, .payment-link, .work-file-link, .card-link, .id-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #202020;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.social-link:hover, .payment-link:hover, .work-file-link:hover, .card-link:hover, .id-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-link i, .payment-link i, .work-file-link i, .card-link i, .id-link i {
+    font-size: 1.4em;
+    margin-right: 8px;
+}
+
+.social-link span, .payment-link span, .work-file-link span, .card-link span, .id-link span {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.social-link.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.social-link.facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.social-link.location {
+    background: #3498db;
+    color: white;
+}
+
+.payment-link.vodafone {
+    background: #0066CC;
+    color: white;
+}
+
+.payment-link.etisalat {
+    background: #009933;
+    color: white;
+}
+
+.payment-link.instapay {
+    background: #FF6B6B;
+    color: white;
+}
+
+.location-section {
+    text-align: center;
+}
+
+.location-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s;
+    background-color: #3498db;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.location-link:hover {
+    transform: translateY(-5px);
+}
+
+.location-link i {
+    font-size: 1.2em;
+}
+
+.google-maps {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
