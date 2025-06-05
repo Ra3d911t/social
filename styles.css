@@ -182,31 +182,92 @@ header {
 
 .quran-number {
     text-align: center;
-    margin: 20px 0;
+    margin: 10px 0;
+    padding: 10px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .number-box {
-    display: inline-block;
-    background: #fff9e6;
-    padding: 15px 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-bottom: 10px;
-    border: 1px solid #ffd700;
-    position: relative;
-    overflow: hidden;
+    background: #f8f9fa;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 6px;
 }
 
-.number-box::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgba(255,215,0,0.1), rgba(255,215,0,0.05));
-    transform: rotate(45deg);
-    z-index: 1;
+.quran-text {
+    font-size: 0.7em;
+    line-height: 1.2;
+    color: #34495e;
+    font-family: 'Amiri', serif;
+    direction: rtl;
+}
+
+.sura-number {
+    font-size: 0.6em;
+    color: #666;
+    margin-top: 3px;
+}
+
+.mobile-content {
+    padding: 10px;
+}
+
+.social-links,
+.payment-links,
+.card-section {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.social-links h3,
+.payment-links h3,
+.card-section h3 {
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    color: #34495e;
+    text-align: center;
+}
+
+.social-link,
+.payment-link,
+.card-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #202020;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 4px 0;
+    font-size: 0.8em;
+}
+
+.social-link:hover,
+.payment-link:hover,
+.card-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.social-link i,
+.payment-link i,
+.card-link i {
+    font-size: 1.1em;
+    margin-right: 4px;
+}
+
+.card-image {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    border-radius: 4px;
+    margin-right: 4px;
 }
 
 .number-box span {
