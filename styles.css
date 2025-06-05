@@ -17,9 +17,7 @@ body {
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px;
 }
 
 @keyframes gradientBG {
@@ -280,33 +278,70 @@ p {
     color: #7f8c8d;
 }
 
+.inf.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 .info-table {
     width: 100%;
+    margin: 15px 0;
     border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.info-table th,
+.info-table td {
+    padding: 12px;
+    text-align: center;
 }
 
 .info-table th {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.2em;
-    color: #34495e;
-}
-
-.info-table td {
-    padding: 30px;
-    vertical-align: top;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
 }
 
 .social-links,
 .payment-links,
-.work-files {
+.card-section {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 8px;
+    width: 100%;
+}
+
+.social-link,
+.payment-link,
+.card-link,
+.id-link {
+    display: flex;
     align-items: center;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #202020;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0.85em;
+}
+
+.social-link i,
+.payment-link i,
+.card-link i,
+.id-link i {
+    font-size: 1.2em;
+    margin-right: 6px;
+}
+
+.card-image {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-right: 6px;
 }
 
 .work-file-link {
